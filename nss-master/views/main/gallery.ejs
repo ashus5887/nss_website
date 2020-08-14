@@ -1,0 +1,32 @@
+<% layout('layout') -%>
+<!--Work-->
+<div class="section scrollspy" id="work">
+    <div class="container">
+      <!-- works -->
+      <h3 class="center header text_h2"><span class="span_h2"> Gallery</span></h3>
+      <div class="row">
+      <div id="works" class="grid">
+          <% for(var i = 0; i< events.length;i++) {%>
+            <a href="/event/<%= events[i]._id %>"><figure class="effect-oscar  wowload fadeInUp">
+              <img src="/img/events/<%= events[i].image1 %>" class="gallery__img" alt="img01"/>
+               <figcaption>
+                 <br><br>
+                 <p>Click to view</p>
+               </figcaption>
+           </figure>
+         </a>
+             <% } %>
+    </div>
+  </div>
+
+    </div>
+</div>
+
+<style>
+  .gallery__img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    margin:10px;
+}
+</style>
